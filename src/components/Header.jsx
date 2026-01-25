@@ -1,4 +1,4 @@
-import { react, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import {
   HeaderContainer,
@@ -6,7 +6,6 @@ import {
   HeaderIcon,
   HeaderText,
   PcNavGroup,
-  NavGroup,
   NavItem,
   ApplyButton,
   MobileMenu,

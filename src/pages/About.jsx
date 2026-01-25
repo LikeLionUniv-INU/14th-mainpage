@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  fadeIn,
   Container,
   SloganSection,
   SloganTitle,

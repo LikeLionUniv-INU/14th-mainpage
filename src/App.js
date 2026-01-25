@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import GlobalStyle from "./index.css";
+// import GlobalStyle from "./index.css";
 import ScrollToTop from "./components/ScrollToTop";
 import Header from "./components/Header";
 import MainPage from "./pages/MainPage";

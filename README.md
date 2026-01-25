@@ -1,6 +1,6 @@
 # 🦁 LikeLion INU Mainpage
 
-> **멋쟁이사자처럼 인천대학교 공식 웹사이트** >
+> **멋쟁이사자처럼 인천대학교 공식 웹사이트**
 > ![Project Status](https://img.shields.io/badge/Status-Active-brightgreen)
 
 ## 🌐 Deployment
