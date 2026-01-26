@@ -56,7 +56,10 @@ function MainPage() {
           <DDayText>{dDay}</DDayText>
           <RecruitText>2026.02.16(월) ~ 2026.03.06(금)</RecruitText>
         </div>
-        <NotifyButton href="https://forms.google.com/..." target="_blank">
+        <NotifyButton
+          href="https://forms.gle/DwUNks3rVKT2GESv5"
+          target="_blank"
+        >
           알림 신청하기 🔔
         </NotifyButton>
       </RecruitCard>
