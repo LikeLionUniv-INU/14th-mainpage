@@ -22,7 +22,7 @@ function Tracks() {
       desc: "서비스의 시작과 끝을 책임져요. 문제를 정의하고, 해결책을 설계하며, 팀이 나아갈 방향을 제시해요.",
       techs: ["#Figma", "#Notion", "#User Flow", "#Wireframe"],
       recommend: [
-        "평소 '이런 서비스 있으면 좋겠다' 상상을 자주 하시는 분",
+        "평소 '이런 서비스 있으면 좋겠다' 생각을 자주 하시는 분",
         "팀원들과 소통하며 의견을 조율하는 것을 좋아하시는 분",
         "논리적인 사고로 문제를 해결하고 싶으신 분",
       ],
@@ -89,7 +89,7 @@ function Tracks() {
             </div>
 
             <RecommendBox>
-              <RecommendTitle>✅ 이런 분께 추천해요</RecommendTitle>
+              <RecommendTitle>✅ 이런 분들께 추천해요</RecommendTitle>
               <RecommendList>
                 {item.recommend.map((rec, i) => (
                   <li key={i}>{rec}</li>

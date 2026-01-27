@@ -18,7 +18,7 @@ import {
 } from "../styles/mainpage.styles";
 
 function MainPage() {
-  // 디데이 계산 로직
+  // 디데이 계산 로직 - UTC 기준이라 한국시간 09시에 반영됨
   const [dDay, setDDay] = useState("");
   useEffect(() => {
     const targetDate = new Date("2026-02-16"); // 모집 시작 날짜
@@ -39,7 +39,7 @@ function MainPage() {
     <Container>
       {/* 슬로건 섹션 */}
       <HeroSection>
-        <HeroLogo src="assets/likelion_inu_logo.png" alt="INU Logo" />
+        <HeroLogo src="assets/likelion_inu_logo.png" />
         <TextContainer>
           <TitleImage />
           <SubText>
