@@ -5,7 +5,7 @@
 
 ## 🌐 Deployment
 
-👉 **Live Demo:** [https:likelion-inu.vercel.app](https://likelion-inu.vercel.app)
+👉 **Live Demo:** [inu-likelion.com](https://inu-likelion.com)
 
 ---
 
