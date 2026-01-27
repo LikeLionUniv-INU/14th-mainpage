@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import {
   Container,
   HeaderSection,
@@ -13,9 +13,17 @@ import {
   RecommendBox,
   RecommendTitle,
   RecommendList,
+  TabContainer,
+  TabButton,
+  TrackContainer,
+  StepCard,
+  StepNumber,
+  StepTitle,
+  StepList,
 } from "../styles/tracks.styles";
 
 function Tracks() {
+  // 전체 트랙 설명
   const tracksData = [
     {
       part: "기획 | PM",
@@ -50,7 +58,7 @@ function Tracks() {
     {
       part: "백엔드 | Backend",
       desc: "보이지 않는 곳에서 데이터를 처리해요. 서버를 구축하고 API를 통해 서비스의 심장을 만들어요.",
-      techs: ["#Java", "#Django", "#AWS", "#Database"],
+      techs: ["#Java", "#Django", "#Spring", "#Database"],
       recommend: [
         "데이터가 어떻게 이동하고 저장되는지 원리가 궁금하신 분",
         "논리적인 로직을 짜고 시스템을 구축하는 데 흥미가 있으신 분",
@@ -58,6 +66,106 @@ function Tracks() {
       ],
     },
   ];
+
+  // 파트별 세부 커리큘럼 설명
+  const [activeTab, setActiveTab] = useState("design");
+  const trackData = {
+    design: [
+      {
+        step: "STEP 01",
+        title: "문제 정의와 사용자 이해",
+        contents: [
+          "IT 서비스 협업 구조의 이해",
+          "Figma 입문 & 사용자 시나리오 제작",
+          "IA (정보 구조) 설계 및 구조화",
+        ],
+      },
+      {
+        step: "STEP 02",
+        title: "흐름 설계와 UI 구조화",
+        contents: [
+          "사용자 플로우 (User Flow) 설계",
+          "컴포넌트 활용 & Auto Layout",
+          "와이어프레임 제작",
+          "1차 UX 테스트 및 피드백",
+        ],
+      },
+      {
+        step: "STEP 03",
+        title: "명세화와 협업 프로세스",
+        contents: [
+          "기능 명세서 작성 및 구체화",
+          "디자인 시스템 기초 구축",
+          "High-Fi UI 디자인 & 2차 UX 테스트",
+          "개발 핸드오프 및 협업 마무리",
+        ],
+      },
+    ],
+    frontend: [
+      {
+        step: "STEP 01",
+        title: "웹 마크업과 스타일링",
+        contents: [
+          "HTML & CSS 핵심 문법",
+          "CSS 레이아웃 & 반응형 설계",
+          "JavaScript 기초 & DOM 조작",
+          "비동기 처리(Async) & 데이터 흐름",
+        ],
+      },
+      {
+        step: "STEP 02",
+        title: "React 핵심 개념",
+        contents: [
+          "React 시작하기 & 컴포넌트 사고",
+          "상태(State) 관리와 Effect",
+          "React Router와 동적 라우팅",
+          "Styled-components 스타일링",
+        ],
+      },
+      {
+        step: "STEP 03",
+        title: "서비스 구조 설계와 실전 연동",
+        contents: [
+          "TypeScript 기본 문법",
+          "Supabase 연동 (BaaS)",
+          "최종 서비스 구현 및 디버깅",
+          "프로젝트 배포 및 최적화",
+        ],
+      },
+    ],
+    backend: [
+      {
+        step: "STEP 01",
+        title: "Java Core & OOP",
+        contents: [
+          "Java 핵심 문법 이해",
+          "객체지향 I (클래스와 캡슐화)",
+          "객체지향 II (상속/다형성/추상화)",
+          "Java Collections Framework",
+        ],
+      },
+      {
+        step: "STEP 02",
+        title: "Spring Boot & API",
+        contents: [
+          "Spring의 핵심 (IoC/DI) 이해",
+          "Spring Boot 환경 구축",
+          "REST API 설계 및 CRUD 구현",
+          "계층형 아키텍처(Layered Arch) 이해",
+        ],
+      },
+      {
+        step: "STEP 03",
+        title: "JPA와 데이터베이스",
+        contents: [
+          "JPA 기초 & 영속성 컨텍스트",
+          "Entity 매핑 및 연관관계 설정",
+          "트랜잭션(Transaction) 관리",
+          "최종 프로젝트 완성 및 배포",
+        ],
+      },
+    ],
+  };
 
   return (
     <Container>
@@ -99,6 +207,52 @@ function Tracks() {
           </TrackCard>
         ))}
       </GridContainer>
+
+      {/* 파트별 세부 커리큘럼 */}
+      <HeaderSection style={{ marginBottom: "30px" }}>
+        <Title>
+          TRACK <span>CURRICULUM</span>
+        </Title>
+        <SubText>
+          각 파트별 세부 커리큘럼을 소개합니다.
+          <br />* 세부 내용은 스터디 일정에 따라 조정될 수 있어요.
+        </SubText>
+      </HeaderSection>
+
+      <TabContainer>
+        <TabButton
+          $active={activeTab === "design"}
+          onClick={() => setActiveTab("design")}
+        >
+          기획 | 디자인
+        </TabButton>
+        <TabButton
+          $active={activeTab === "frontend"}
+          onClick={() => setActiveTab("frontend")}
+        >
+          프론트엔드
+        </TabButton>
+        <TabButton
+          $active={activeTab === "backend"}
+          onClick={() => setActiveTab("backend")}
+        >
+          백엔드
+        </TabButton>
+      </TabContainer>
+
+      <TrackContainer>
+        {trackData[activeTab].map((item, index) => (
+          <StepCard key={index}>
+            <StepNumber>{item.step}</StepNumber>
+            <StepTitle>{item.title}</StepTitle>
+            <StepList>
+              {item.contents.map((content, idx) => (
+                <li key={idx}>{content}</li>
+              ))}
+            </StepList>
+          </StepCard>
+        ))}
+      </TrackContainer>
     </Container>
   );
 }

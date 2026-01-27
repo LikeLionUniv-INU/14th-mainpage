@@ -55,7 +55,7 @@ export const GridContainer = styled.div`
   gap: 40px;
   width: 100%;
   max-width: 1000px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -165,6 +165,99 @@ export const RecommendList = styled.ul`
       position: absolute;
       left: 0;
       color: #666;
+    }
+  }
+`;
+
+// 여기서부터 파트별 세부 커리큘럼 섹션
+export const TabContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+`;
+
+export const TabButton = styled.button`
+  background: ${(props) =>
+    props.$active ? "#ff7710" : "rgba(255, 255, 255, 0.05)"};
+  color: ${(props) => (props.$active ? "#fff" : "#aaa")};
+  border: 1px solid
+    ${(props) => (props.$active ? "#ff7710" : "rgba(255, 255, 255, 0.1)")};
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "SUITE", sans-serif;
+
+  &:hover {
+    background: ${(props) =>
+      props.$active ? "#ff7710" : "rgba(255, 255, 255, 0.1)"};
+    transform: translateY(-2px);
+  }
+`;
+
+export const TrackContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const StepCard = styled.div`
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: left;
+  transition: 0.3s;
+
+  &:hover {
+    border-color: #ff7710;
+    transform: translateY(-5px);
+  }
+`;
+
+export const StepNumber = styled.div`
+  color: #ff7710;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+`;
+
+export const StepTitle = styled.h3`
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+`;
+
+export const StepList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: "•";
+      color: #ff7710;
+      position: absolute;
+      left: 0;
     }
   }
 `;
