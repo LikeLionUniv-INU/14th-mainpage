@@ -58,7 +58,7 @@ function Tracks() {
     {
       part: "백엔드 | Backend",
       desc: "보이지 않는 곳에서 데이터를 처리해요. 서버를 구축하고 API를 통해 서비스의 심장을 만들어요.",
-      techs: ["#Java", "#Django", "#Spring", "#Database"],
+      techs: ["#Java", "#AWS", "#Spring", "#Database"],
       recommend: [
         "데이터가 어떻게 이동하고 저장되는지 원리가 궁금하신 분",
         "논리적인 로직을 짜고 시스템을 구축하는 데 흥미가 있으신 분",
