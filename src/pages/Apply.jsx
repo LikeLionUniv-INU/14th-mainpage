@@ -43,7 +43,7 @@ function Apply() {
       case "ING":
         return {
           text: "14기 아기사자 지원하기 🚀",
-          link: "https://forms.google.com/your-form-url", // 지원 구글폼 주소
+          link: "https://forms.gle/zMQufHqMTpiw2M4s7", // 지원 구글폼 주소
           disabled: false,
         };
       case "END":
@@ -63,7 +63,7 @@ function Apply() {
     <Container>
       <TitleSection>
         <Title>
-          BE <span>LIKELION.UNIV</span>
+          BE <span>LIKELION</span>
         </Title>
         <SubText>
           이제 여러분의 차례입니다.
