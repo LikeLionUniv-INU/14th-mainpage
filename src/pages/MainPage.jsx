@@ -52,7 +52,7 @@ function MainPage() {
       {/* 모집 안내 섹션 */}
       <RecruitCard>
         <div>
-          <RecruitText>14기 아기사자 모집 시작까지</RecruitText>
+          <RecruitText>14기 아기사자 모집 시작!</RecruitText>
           {/* 지원 시작하면 문구 바꾸기 */}
           <DDayText>{dDay}</DDayText>
           <RecruitText>2026.02.16(월) ~ 2026.03.06(금)</RecruitText>
@@ -60,10 +60,10 @@ function MainPage() {
 
         {/* 지원 시작하면 링크/문구 바꾸기 */}
         <NotifyButton
-          href="https://forms.gle/DwUNks3rVKT2GESv5"
+          href="https://forms.gle/zMQufHqMTpiw2M4s7"
           target="_blank"
         >
-          알림 신청하기 🔔
+          지원하기 🎯
         </NotifyButton>
       </RecruitCard>
 
