@@ -32,6 +32,20 @@ function Footer() {
         <ContactSection>
           <h3>CONTACT</h3>
           <IconGroup>
+            {/* 카카오톡 아이콘 (SVG) */}
+            <SocialIcon
+              href="https://open.kakao.com/o/s7dO7khi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M12 3c-5.523 0-10 3.522-10 7.868 0 2.825 1.838 5.303 4.654 6.702-.206.732-.746 2.652-.772 2.75-.052.196.069.191.168.125.078-.052 2.454-1.637 3.444-2.316.804.148 1.638.226 2.506.226 5.523 0 10-3.522 10-7.869S17.523 3 12 3z" />
+              </svg>
+            </SocialIcon>
             {/* 인스타그램 아이콘 (SVG) */}
             <SocialIcon
               href="https://www.instagram.com/likelion_inu/"
