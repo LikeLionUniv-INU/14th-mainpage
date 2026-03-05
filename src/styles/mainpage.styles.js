@@ -54,7 +54,7 @@ export const HeroSection = styled.section`
 
 // 메인 로고 이미지
 export const HeroLogo = styled.img`
-  width: 300px;
+  width: 260px;
   height: auto;
   object-fit: contain;
   animation: ${float} 5s ease-in-out infinite;
@@ -62,8 +62,10 @@ export const HeroLogo = styled.img`
   filter: drop-shadow(0 0 20px rgba(255, 119, 16, 0.3));
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 60%;
     max-width: 250px;
+    margin-top: 20px;
+    margin-bottom: 25px;
   }
 `;
 
