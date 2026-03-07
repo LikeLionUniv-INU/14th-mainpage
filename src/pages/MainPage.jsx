@@ -6,10 +6,10 @@ import {
   TextContainer,
   TitleImage,
   SubText,
-  RecruitCard,
-  DDayText,
-  RecruitText,
-  NotifyButton,
+  // RecruitCard,
+  // DDayText,
+  // RecruitText,
+  // NotifyButton,
   MenuGrid,
   MenuCard,
   CardTitle,
@@ -19,21 +19,21 @@ import {
 
 function MainPage() {
   // 디데이 계산 로직 - UTC 기준이라 한국시간 09시에 반영됨
-  const [dDay, setDDay] = useState("");
-  useEffect(() => {
-    const targetDate = new Date("2026-02-16"); // 모집 시작 날짜
-    const today = new Date();
-    const timeDiff = targetDate - today; // 시간차 계산 (밀리초 단위)
-    const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // 일 단위 변환
+  // const [dDay, setDDay] = useState("");
+  // useEffect(() => {
+  //   const targetDate = new Date("2026-02-16"); // 모집 시작 날짜
+  //   const today = new Date();
+  //   const timeDiff = targetDate - today; // 시간차 계산 (밀리초 단위)
+  //   const daysDiff = Math.ceil(timeDiff / (1000 * 60 * 60 * 24)); // 일 단위 변환
 
-    if (daysDiff > 0) {
-      setDDay(`D-${daysDiff}`);
-    } else if (daysDiff === 0) {
-      setDDay("D-Day");
-    } else {
-      setDDay("RECRUITING"); // 날짜 지났을 때
-    }
-  }, []);
+  //   if (daysDiff > 0) {
+  //     setDDay(`D-${daysDiff}`);
+  //   } else if (daysDiff === 0) {
+  //     setDDay("D-Day");
+  //   } else {
+  //     setDDay("RECRUITING"); // 날짜 지났을 때
+  //   }
+  // }, []);
 
   return (
     <Container>
