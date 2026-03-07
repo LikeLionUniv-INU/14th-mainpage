@@ -1,4 +1,5 @@
-import { React, useState, useEffect } from "react";
+// 주석처리해둔거내년모집시작하면풀어라!!!!!
+// import { React, useState, useEffect } from "react";
 import {
   Container,
   HeroSection,
